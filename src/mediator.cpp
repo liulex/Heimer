@@ -200,6 +200,11 @@ NodeBasePtr Mediator::getNodeByIndex(int index)
     return m_editorData->getNodeByIndex(index);
 }
 
+Graph & Mediator::graph()
+{
+    return m_editorData->mindMapData()->graph();
+}
+
 bool Mediator::hasNodes() const
 {
     return m_editorData->mindMapData() && m_editorData->mindMapData()->graph().numNodes();

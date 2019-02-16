@@ -76,6 +76,8 @@ private:
 
     void showEdgeColorDialog();
 
+    void showLayoutOptimizationDialog();
+
     void showPngExportDialog();
 
     void showMessageBox(QString message);

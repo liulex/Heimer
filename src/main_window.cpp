@@ -117,6 +117,15 @@ void MainWindow::createEditMenu()
     editMenu->addAction(edgeColorAction);
 
     editMenu->addSeparator();
+
+    auto optimizeLayoutAction = new QAction(tr("Automatically optimize layout") + threeDots, this);
+    optimizeLayoutAction->setShortcut(QKeySequence("Ctrl+O"));
+
+    connect(optimizeLayoutAction, &QAction::triggered, [this] () {
+        emit actionTriggered(StateMachine::Action::LayoutOptimizationRequested);
+    });
+
+    editMenu->addAction(optimizeLayoutAction);
 }
 
 QWidgetAction * MainWindow::createEdgeWidthAction()

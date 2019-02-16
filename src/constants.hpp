@@ -118,6 +118,22 @@ static const int MIN_WIDTH = 200;
 
 } // Node
 
+namespace LayoutOptimizer {
+
+static const int DEFAULT_MIN_EDGE_LENGTH = 50;
+
+static const int MIN_EDGE_LENGTH = 10;
+
+static const int MAX_EDGE_LENGTH = 250;
+
+static const double DEFAULT_ASPECT_RATIO = 1.0;
+
+static const double MIN_ASPECT_RATIO = 0.1;
+
+static const double MAX_ASPECT_RATIO = 10;
+
+} // LayoutOptimizer
+
 namespace Scene {
 
 static const QColor BARRIER_COLOR{255, 0, 0, 128};

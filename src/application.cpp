@@ -18,6 +18,8 @@
 #include "editor_data.hpp"
 #include "editor_scene.hpp"
 #include "editor_view.hpp"
+#include "layout_optimization_dialog.hpp"
+#include "layout_optimizer.hpp"
 #include "main_window.hpp"
 #include "mediator.hpp"
 #include "png_export_dialog.hpp"
@@ -195,6 +197,9 @@ void Application::runState(StateMachine::State state)
     case StateMachine::State::ShowPngExportDialog:
         showPngExportDialog();
         break;
+    case StateMachine::State::ShowLayoutOptimizationDialog:
+        showLayoutOptimizationDialog();
+        break;
     case StateMachine::State::ShowNotSavedDialog:
         switch (showNotSavedDialog())
         {
@@ -337,6 +342,13 @@ void Application::showPngExportDialog()
 
     // Doesn't matter if canceled or not
     emit actionTriggered(StateMachine::Action::PngExported);
+}
+
+void Application::showLayoutOptimizationDialog()
+{
+    LayoutOptimizationDialog{*m_mainWindow, LayoutOptimizer{m_mediator->graph()}}.exec();
+
+    emit actionTriggered(StateMachine::Action::LayoutOptimized);
 }
 
 void Application::showMessageBox(QString message)

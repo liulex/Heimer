@@ -26,6 +26,7 @@ class DragAndDropStore;
 class EditorData;
 class EditorScene;
 class EditorView;
+class Graph;
 class MainWindow;
 class QGraphicsItem;
 
@@ -73,6 +74,8 @@ public:
     NodePtr getBestOverlapNode(const Node & source);
 
     NodeBasePtr getNodeByIndex(int index);
+
+    Graph & graph();
 
     bool hasNodes() const;
 
