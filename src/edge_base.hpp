@@ -13,8 +13,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Heimer. If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef EDGEBASE_HPP
-#define EDGEBASE_HPP
+#ifndef EDGE_BASE_HPP
+#define EDGE_BASE_HPP
 
 #include <memory>
 
@@ -72,4 +72,4 @@ private:
 
 using EdgeBasePtr = std::shared_ptr<EdgeBase>;
 
-#endif // EDGEBASE_HPP
+#endif // EDGE_BASE_HPP

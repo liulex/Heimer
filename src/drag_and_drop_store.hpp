@@ -13,8 +13,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Dust Racing 2D. If not, see <http://www.gnu.org/licenses/>.
 
-#ifndef DRAGANDDROPSTORE_HPP
-#define DRAGANDDROPSTORE_HPP
+#ifndef DRAG_AND_DROP_STORE_HPP
+#define DRAG_AND_DROP_STORE_HPP
 
 #include <QPointF>
 
@@ -53,4 +53,4 @@ private:
     Action m_action = Action::None;
 };
 
-#endif // DRAGANDDROPSTORE_HPP
+#endif // DRAG_AND_DROP_STORE_HPP
